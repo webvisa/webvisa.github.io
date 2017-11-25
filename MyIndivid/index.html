@@ -4,45 +4,67 @@
 <head>
 
 	<meta charset="utf-8">
-
-	<title>Web Design Studio MyIndivid</title>
 	<meta name="description" content="">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Design Studio MyIndivid</title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	
+
 	<link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="libs/animate/animate.css">
 	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-  <!-- or -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 	
 
 </head>
 
 <body>
 
-
-		<nav id="top_nav">
-			<div class="container nav-header">
-				<div class="row">
-					<div class="col-md-3 logotype">
-						<img src="img/logo.png" alt="my individ" class="img-responsive center-block">
-					</div>
-					<div id="menu" class="col-md-offset-3 col-md-6  navbar-navi">
-						<ul class="list-inline">
-							<li><a href="#aboutus">о нас</a></li>
-							<li><a href="#brand">брендинг</a></li>
-							<li><a href="#webdesign">web дизайн</a></li>
-							<li><a href="#work">работы</a></li>
-							<li><a href="#contacts">контакты</a></li>
-						</ul>
+			<nav class="hidden-xs" id="top_nav">
+				<div class="container nav-header">
+					<div class="row">
+							<div class="col-md-3 logotype navbar-header">
+									<img src="img/logo.png" alt="my individ" class="img-responsive center-block">
+							</div>
+							<div id="menu" class="col-md-offset-3 col-md-6  navbar-navi">
+									<ul class="list-inline">
+											<li><a href="#aboutus">о нас</a></li>
+											<li><a href="#brand">брендинг</a></li>
+											<li><a href="#webdesign">web дизайн</a></li>
+											<li><a href="#work">работы</a></li>
+											<li><a href="#contacts">контакты</a></li>
+									</ul>
+							</div>
 					</div>
 				</div>
-			</div>
-		</nav>	
-
+			</nav>	
+			<nav class="navbar  visible-xs navbar-visible-xs">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						        <i class="fa fa-bars fa-2x"></i>
+					      </button>
+					      <a class="navbar-brand" href="#">
+					        	<img src="img/logo.png" alt="">
+					      </a>
+				      
+				    </div>
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				          <ul class="text-center">
+					            <li><a href="#aboutus">о нас</a></li><hr>
+											<li><a href="#brand">брендинг</a></li><hr>
+											<li><a href="#webdesign">web дизайн</a></li><hr>
+											<li><a href="#work">работы</a></li><hr>
+											<li><a href="#contacts">контакты</a></li>
+				          </ul>			 
+				    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
 
 		<section id="main">
 			<div class="container main-header wow fadeInUp" data-wow-delay="0.2s">
@@ -192,7 +214,7 @@
 				<div class="row">
 					<div class="col-md-offset-1 col-md-4 contact-logo text-center">						
 						<img src="img/ab-us-logo.png" alt="Design Studio" class="img-responsive center-block">
-						<img src="img/icons/social.svg" alt="Социальные сети" class="img-responsive center-block">
+						<img src="img/icons/social.svg" alt="Социальные сети" class="img-responsive center-block sotial-web">
 					</div>
 					<div class="col-md-offset-1 col-md-6 begin-work text-center">
 						<h1>Готовы начать?</h1>
@@ -211,7 +233,7 @@
 					<div class="col-md-3 logotype-footer">
 						<img src="img/MYINDIVID-footer.png" alt="my individ" class="img-responsive center-block">
 					</div>
-					<div id="menu" class="col-md-offset-1 col-md-5 footer-nav">
+					<div id="menu" class="col-md-offset-1 col-md-5 hidden-xs footer-nav">
 						<ul class="list-unstyled list-inline pull-right">
 							<li><a href="#aboutus">о нас</a></li>
 							<li><a href="#brand">брендинг</a></li>
@@ -219,8 +241,8 @@
 							<li><a href="#work">работы</a></li>
 						</ul>
 					</div>
-					<div class="col-md-offset-1 col-md-2">
-						<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="btn btn-footer">Заказать</button>		
+					<div class="col-md-offset-1 col-md-2 buttom-footer-xs">
+						<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="btn btn-footer center-block">Заказать</button>		
 					</div>
 				</div>
 			</div>
@@ -228,7 +250,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="to_order_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-md">
+  <div class="modal-dialog modal-xs">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -267,11 +289,12 @@
 </div>
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/scripts.min.js"></script>
-	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="libs/animate/animate.css">
+	<script src="https://use.fontawesome.com/9412abf9dc.js"></script>
+	
+	<script src="js/scripts.min.js"></script>
+
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#menu").on("click","a", function (event) {
