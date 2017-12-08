@@ -28,7 +28,7 @@
 
 	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
 
-	
+					<link rel="stylesheet" href="libs/font-awesome.min.css">
 					<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 					<link rel="stylesheet" href="libs/flipclock/flipclock.css">
 					<link href="https://cdn.rawgit.com/objectivehtml/FlipClock/master/src/flipclock/css/flipclock.css" rel="stylesheet" />
@@ -40,22 +40,47 @@
 
 <body>
 
-	<div class=" main-header img-responsive" style="background-image: url(img/Sliding-Gate.jpg);">
+	<div class="main-header img-responsive" style="background-image: url(img/Sliding-Gate.jpg);">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-md-offset-1 brand">
-					<h3><a id="Home" href="Home">Sliding.com.ua</a></h3>
-				</div>
-							<div class="col-md-6 col-md-offset-2 navbar-navi">
-								<ul class="list-inline">
-									<li><a href="#">Home</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">Portfolio</a></li>
-									<li><a href="#">About</a></li>
-									<li><a href="#contacts">Contacts</a></li>
-								</ul>
+
+					<nav class="hidden-xs">
+						<div class="row">
+							<div class="col-md-3 col-md-offset-1 brand">
+								<h3><a id="Home" href="Home">Sliding.com.ua</a></h3>
 							</div>
-			</div>
+										<div id="menu" class="col-md-6 col-md-offset-2 navbar-navi">
+											<ul class="list-inline">
+												<li><a href="#">Home</a></li>
+												<li><a href="#">Services</a></li>
+												<li><a href="#">Portfolio</a></li>
+												<li><a href="#">About</a></li>
+												<li><a href="#contacts">Contacts</a></li>
+											</ul>
+										</div>
+						</div>
+					</nav>
+
+
+					<nav class="visible-xs navbar-visible-xs">
+						<div class="row">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						    <i class="fa fa-bars fa-2x"></i>
+					     </button>
+							<div class="brand">
+								<h3><a id="Home" href="Home">Sliding.com.ua</a></h3>
+							</div>
+										<div class="collapse navbar-collapse navbar-navi" id="bs-example-navbar-collapse-1">
+											<ul>
+												<li><a href="#">Home</a></li>
+												<li><a href="#">Services</a></li>
+												<li><a href="#">Portfolio</a></li>
+												<li><a href="#">About</a></li>
+												<li><a href="#contacts">Contacts</a></li>
+											</ul>
+										</div>
+						</div>
+					</nav>
+
 			<div class="row main-h">
 				<div class="col-md-9 col-md-offset-2">
 					<h2>Автоматика для</h2>
@@ -70,11 +95,15 @@
 		</div>
 	</div><!--Navigation-->
 
+
+
+
+
 	<div class="automatic">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Автоматика для сдвижных ворот<br>Sliling 800/1300</h3>
+					<h3>Автоматика для сдвижных ворот<br>Sliding 800/1300</h3>
 				</div>
 				<div class="row">
 					<div class="col-md-3">
@@ -125,7 +154,7 @@
 			</div>
 		</div><!--Аdvantages-->
 
-		<div id="Carousel-product" class="carousel slide" data-ride="carousel">
+		<div id="Carousel-product" class="carousel slide hidden-xs" data-ride="carousel">
 			<!-- Слайды карусели -->
 			<div class="carousel-inner">
 				<!-- Слайд 1 -->
@@ -318,7 +347,7 @@
 							<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="btn-green">Заказать</button>
 						</div>
 					</div>
-					<div class="col-md-3 col-md-offset-1">
+					<div class="col-md-3 col-md-offset-1 col-xs-12">
 						<div class="center-block">
 							<img src="img/photocell.png" alt="Фотоэлементы" class="center-block order">
 						</div>
@@ -334,7 +363,7 @@
 		</div>
 	</div><!--Equipment-->
 
-	<div class="sale container">
+	<div class="sale container ">
 		<!-- СЛАЙДЕР- -->
 		<div id="Carousel-client" class="carousel slide" data-ride="carousel">
 			<!-- Слайды карусели -->
@@ -384,7 +413,7 @@
 
 
 
-	<div class="sale-order ">
+	<div class="sale-order">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 sliders">
@@ -396,7 +425,7 @@
 					<h3>-20%</h3>
 					<p>до конца акции осталось:</p>
 					<div class="row">
-						<div class=" col-md-12 timer">
+						<div class=" col-md-12 col-xs-12 timer">
 							<div class="clock img-responsive"></div>
 							<div class="message"></div>
 						</div>
@@ -414,12 +443,12 @@
 <footer id="contacts">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-md-offset-1 footer">
+			<div class="col-md-3 col-md-offset-1 col-xs-12 col-sm-12 footer">
 				<h3><a href="#">Sliding.com.ua</a></h3>
 				<a class="tel" href="tel">+38 (067) 123 45 67</a><br>
 				<a class="tel" href="tel">+38 (050) 123 45 67</a>
 			</div>
-			<div class="col-md-6 col-md-offset-2 navbar-navi">
+			<div class="col-md-6 col-md-offset-2 navbar-navi hidden-xs hidden-sm">
 				<ul class="list-inline">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Services</a></li>
@@ -534,6 +563,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://cdn.rawgit.com/objectivehtml/FlipClock/master/compiled/flipclock.min.js"></script>
 	<script src="libs/flipclock/flipclock.min.js"></script>
+	<script src="https://use.fontawesome.com/9412abf9dc.js"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>
