@@ -21,3 +21,21 @@ jQuery(document).ready(function($) {
      countdown: true
    });
  });
+
+
+
+$(function(){
+
+    $('.navbar-toggle').on('click', function(){
+
+        $('.menu-small').slideToggle(300, function(){
+
+          if ($(this).css('display') === 'none') {
+              $(this).removeAttr('style');
+          }
+
+        });
+
+    })
+
+})
