@@ -28,11 +28,14 @@
 
 	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
 
+					<script type="text/javascript" src="js/common.js"></script>
+
 					<link rel="stylesheet" href="libs/font-awesome.min.css">
 					<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 					<link rel="stylesheet" href="libs/flipclock/flipclock.css">
 					<link href="https://cdn.rawgit.com/objectivehtml/FlipClock/master/src/flipclock/css/flipclock.css" rel="stylesheet" />
 					<link rel="stylesheet" href="css/main.min.css">
+					<link rel="stylesheet" href="libs/animate.css">
 
   
 
@@ -40,28 +43,29 @@
 
 <body>
 
-	<div class="main-header img-responsive" style="background-image: url(img/Sliding-Gate.jpg);">
+	<div id="home" class="main-header img-responsive" style="background-image: url(img/Sliding-Gate.jpg);">
 		<div class="container">
 
-					<nav class="hidden-xs">
+					<nav id="top-nav" class="hidden-xs">
 						<div class="row">
-							<div class="col-md-3 col-md-offset-1 brand">
+							<div class="col-md-3 col-md-offset-1 brand wow rollIn" data-wow-delay="2s">
 								<h3><a id="Home" href="Home">Sliding.com.ua</a></h3>
 							</div>
-										<div id="menu" class="col-md-6 col-md-offset-2 navbar-navi">
+										<div id="menu" class="col-md-8  navbar-navi">
 											<ul class="list-inline">
-												<li><a href="#">Home</a></li>
-												<li><a href="#">Services</a></li>
-												<li><a href="#">Portfolio</a></li>
-												<li><a href="#">About</a></li>
-												<li><a href="#contacts">Contacts</a></li>
+												<li><a href="#home">Главная</a></li>
+												<li><a href="#production">Продукция</a></li>
+												<li><a href="#delivery">Доставка</a></li>
+												<li><a href="#complect">Комплектация</a></li>
+												<li><a href="#actions">Акции</a></li>
+												<li><a href="#contacts">Контакты</a></li>
 											</ul>
 										</div>
 						</div>
 					</nav>
 
 
-					<nav class="visible-xs navbar-visible-xs">
+					<nav id="menu" class="visible-xs navbar-visible-xs">
 						<div class="row menu-s">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="" aria-expanded="false">
 						    <i class="fa fa-bars fa-2x"></i>
@@ -71,11 +75,12 @@
 							</div>
 										<div class="navbar-navi menu-small" id="">
 											<ul>
-												<li><a href="#">Home</a></li>
-												<li><a href="#">Services</a></li>
-												<li><a href="#">Portfolio</a></li>
-												<li><a href="#">About</a></li>
-												<li><a href="#contacts">Contacts</a></li>
+												<li><a href="#home">Главная</a></li>
+												<li><a href="#production">Продукция</a></li>
+												<li><a href="#delivery">Доставка</a></li>
+												<li><a href="#complect">Комплектация</a></li>
+												<li><a href="#actions">Акции</a></li>
+												<li><a href="#contacts">Контакты</a></li>
 											</ul>
 										</div>
 						</div>
@@ -83,12 +88,12 @@
 
 			<div class="row main-h">
 				<div class="col-md-9 col-md-offset-2">
-					<h2>Автоматика для</h2>
-					<h1>Сдвижных ворот</h1>
+					<h2 class="wow bounceInLeft">Автоматика для</h2>
+					<h1 class="wow bounceInRight">Сдвижных ворот</h1>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-3 col-md-offset-4 btn-com">
+				<div class="col-md-3 col-md-offset-4 btn-com wow bounce">
 					<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="btn-green">Заказать</button>
 				</div>
 			</div>
@@ -99,14 +104,14 @@
 
 
 
-	<div class="automatic">
+	<div id="production" class="automatic">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<h3>Автоматика для сдвижных ворот<br>Sliding 800/1300</h3>
 				</div>
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-3 wow zoomIn" data-wow-delay="0.5s">
 						<div class=" center-block">
 							<div class="circle center-block">
 								<img src="img/icon_avt/moisture.png" alt="Влагозащита" class="center-block moisture">
@@ -117,7 +122,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 wow zoomIn" data-wow-delay="1s">
 						<div class=" center-block">
 							<div class="circle center-block">
 								<img src="img/icon_avt/temperature.png" alt="Рабочая температура" class="center-block temperature">
@@ -128,7 +133,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 wow zoomIn" data-wow-delay="1.5s">
 						<div class=" center-block">
 							<div class="circle center-block">
 								<img src="img/icon_avt/stock.png" alt="Всегда на складе" class="center-block stock">
@@ -139,7 +144,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 wow zoomIn" data-wow-delay="2s">
 						<div class=" center-block">
 							<div class="circle center-block">
 								<img src="img/icon_avt/guarantee.png" alt="Гарантия" class="center-block guarantee">
@@ -224,14 +229,14 @@
 			</a>
 		</div><!--Slider-product-->
 	
-	<div class="delivery img-responsive" style="background-image: url(img/dostavka_40.jpg);">
+	<div id="delivery" class="delivery img-responsive" style="background-image: url(img/dostavka_40.jpg);">
 			<div class="container">
 					<div class="row">
 							<div class="col-md-12">
 								<h3>Доставка по всей Украине</h3>
 							</div>
 							<div class="row">
-									<div class="col-md-3">
+									<div class="col-md-3 wow zoomIn" data-wow-delay="2s">
 								    <div class=" center-block">
 										    	<div class="circle center-block">
 										    			<img src="img/icon_avt/order.png" alt="Оставить заказ" class="center-block order">
@@ -242,7 +247,7 @@
 										      </div>
 								    </div>
 								  </div>
-								  <div class="col-md-3">
+								  <div class="col-md-3 wow zoomIn" data-wow-delay="1.5s">
 								    <div class=" center-block">
 										    	<div class="circle center-block">
 										    			<img src="img/icon_avt/confirmation.png" alt="Подтверждение заказа" class="center-block confirmation">
@@ -253,7 +258,7 @@
 										      </div>
 								    </div>
 								  </div>
-								  <div class="col-md-3">
+								  <div class="col-md-3 wow zoomIn" data-wow-delay="1s">
 								    <div class=" center-block">
 										    	<div class="circle center-block">
 										    			<img src="img/icon_avt/delivery.png" alt="Доставка" class="center-block delivery-logo">
@@ -264,7 +269,7 @@
 										      </div>
 								    </div>
 								  </div>
-								  <div class="col-md-3">
+								  <div class="col-md-3 wow zoomIn" data-wow-delay="0.5s">
 								    <div class=" center-block">
 										    	<div class="circle center-block">
 										    			<img src="img/icon_avt/payment.png" alt="Оплата" class="center-block payment">
@@ -278,28 +283,28 @@
 							</div>
 					</div>
 					<div class="row carriers">
-							<div class="col-md-3">
+							<div class="col-md-3 wow zoomIn" data-wow-delay="0.5s">
 									<img src="img/icon_avt/Nova_Poshta.svg" alt="Новая почта">
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 wow zoomIn" data-wow-delay="1s">
 									<img src="img/icon_avt/Intime.svg" alt="Intime">
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 wow zoomIn" data-wow-delay="1.5s">
 									<img src="img/icon_avt/Delivery.svg" alt="Delivery">
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 wow zoomIn" data-wow-delay="2s">
 									<img src="img/icon_avt/SAT.svg" alt="SAT">
 							</div>
 					</div>
 			</div>
 	</div><!--Delivery-->
 
-	<div class="complect">
+	<div id="complect" class="complect">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-1">
+				<div class="col-md-8 col-md-offset-1 wow zoomInDown">
 					<h3>В комплект автоматики входит:</h3>												
-					<div class="caption-1">
+					<div class="caption-1 wow bounceInRight" data-wow-delay="1s">
 						<ul>
 							<li>
 								<h4>Электропривод</h4>
@@ -307,7 +312,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="caption-2">
+					<div class="caption-2 wow bounceInRight" data-wow-delay="2s">
 						<ul>
 							<li>
 								<h4>Магнитные концевики</h4>
@@ -315,7 +320,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="caption-3">
+					<div class="caption-3 wow bounceInRight" data-wow-delay="3s">
 						<ul>
 							<li>
 								<h4>Комплект для монтажа</h4>
@@ -328,8 +333,8 @@
 					<img src="img/Sliding-800.png" alt="Sliding-800">
 				</div>			
 				<div class="row complect-1">
-					<h3>Аксессуары<br> для автоматических ворот</h3>
-					<div class="col-md-3 col-md-offset-1">
+					<h3 class="wow zoomInLeft" data-wow-delay="4s">Аксессуары<br> для автоматических ворот</h3>
+					<div class="col-md-3 col-md-offset-1 wow zoomIn" data-wow-delay="2s">
 						<div class="center-block">
 							<img src="img/transmitter.png" alt="Пульт дистанционного управления" class="center-block order">
 						</div>
@@ -340,7 +345,7 @@
 							<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="btn-green">Заказать</button>
 						</div>
 					</div>
-					<div class="col-md-3 col-md-offset-1">
+					<div class="col-md-3 col-md-offset-1 wow zoomIn" data-wow-delay="2.5s">
 						<div class="center-block">
 							<img src="img/lamp.png" alt="Сигнальная светодиодная лампа" class="center-block order">
 						</div>
@@ -351,7 +356,7 @@
 							<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="btn-green">Заказать</button>
 						</div>
 					</div>
-					<div class="col-md-3 col-md-offset-1 col-xs-12">
+					<div class="col-md-3 col-md-offset-1 col-xs-12 wow zoomIn" data-wow-delay="3s">
 						<div class="center-block">
 							<img src="img/photocell.png" alt="Фотоэлементы" class="center-block order">
 						</div>
@@ -374,7 +379,7 @@
 				<div class="item active">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-3 col-md-offset-1">
+							<div class="client-img col-md-3 col-md-offset-1 col-xs-12 col-sm-12">
 								<img src="img/client-1.png" alt="">
 							</div>
 							<div class="col-md-6 col-md-offset-1">
@@ -389,7 +394,7 @@
 				<div class="item">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-3 col-md-offset-1">
+							<div class="col-md-3 col-md-offset-1 col-xs-12">
 								<img src="img/client-1.png" alt="">
 							</div>
 							<div class="col-md-6 col-md-offset-1">
@@ -418,16 +423,16 @@
 
 
 
-	<div class="sale-order">
+	<div id="actions" class="sale-order">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 sliders">
 					<img class="shadow-800" src="img/Sliding-800.png" alt="Sliding-800">
 				</div>
 				<div class="col-md-7 action">
-					<h1>Закажи сейчас!</h1>
-					<h2>и получи скидку</h2>
-					<h3>-20%</h3>
+					<h1 class="wow swing">Закажи сейчас!</h1>
+					<h2 class="wow bounceInRight" data-wow-delay="1s">и получи скидку</h2>
+					<h3 class="wow flipInX" data-wow-delay="2s">-20%</h3>
 					<p>до конца акции осталось:</p>
 					<div class="row">
 						<div class=" col-md-12 col-xs-12 timer">
@@ -453,13 +458,12 @@
 				<a class="tel" href="tel">+38 (067) 123 45 67</a><br>
 				<a class="tel" href="tel">+38 (050) 123 45 67</a>
 			</div>
-			<div class="col-md-6 col-md-offset-2 navbar-navi hidden-xs hidden-sm">
+			<div class="col-md-6 col-md-offset-2 navbar-navi">
 				<ul class="list-inline">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contacts</a></li>
+					<li><a href="#home">Главная</a></li>
+					<li><a href="#production">Продукция</a></li>
+					<li><a href="#delivery">Доставка</a></li>
+					<li><a href="#complect">Комплектация</a></li>
 				</ul>
 			</div>
 		</div>
@@ -502,65 +506,6 @@
 			</div>
 		</div>
 	</div><!--Modal-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-		$(document).ready(function(){
-			$("#menu").on("click","a", function (event) {
-			//отменяем стандартную обработку нажатия по ссылке
-			event.preventDefault();
-
-			//забираем идентификатор бока с атрибута href
-			var id = $(this).attr('href'),
-
-			//узнаем высоту от начала страницы до блока на который ссылается якорь
-			top = $(id).offset().top;
-
-			//анимируем переход на расстояние - top за 1500 мс
-			$('body,html').animate({scrollTop: top}, 1500);
-			});
-		});
-	</script>
-
-	<script>
-			var h_hght = 60; // высота шапки
-			var h_mrg = 0;    // отступ когда шапка уже не видна
-			                 
-			$(function(){
-			 
-			    var elem = $('#top_nav');
-			    var top = $(this).scrollTop();
-			     
-			    if(top > h_hght){
-			        elem.css('top', h_mrg);
-			    }           
-			     
-			    $(window).scroll(function(){
-			        top = $(this).scrollTop();
-			         
-			        if (top+h_mrg < h_hght) {
-			            elem.css('top', (h_hght-top));
-			        } else {
-			            elem.css('top', h_mrg);
-			        }
-			    });
-			 
-			});
-	</script>
 					
 
 
@@ -570,6 +515,10 @@
 	<script src="libs/flipclock/flipclock.min.js"></script>
 	<script src="https://use.fontawesome.com/9412abf9dc.js"></script>
 	<script src="js/scripts.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 
 </body>
 </html>

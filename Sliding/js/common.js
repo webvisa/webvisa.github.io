@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
    var clock;
-   var futureDate = new Date("January 1, 2018 0:00 PM EDT");
+   var futureDate = new Date("January 10, 2018 0:00 PM EDT");
    var currentDate = new Date();
    var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
@@ -39,3 +39,20 @@ $(function(){
     })
 
 })
+
+
+$(document).ready(function(){
+      $("#menu").on("click","a", function (event) {
+          //отменяем стандартную обработку нажатия по ссылке
+          event.preventDefault();
+
+          //забираем идентификатор бока с атрибута href
+          var id  = $(this).attr('href'),
+
+          //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+          
+          //анимируем переход на расстояние - top за 1500 мс
+          $('body,html').animate({scrollTop: top}, 1000);
+  });
+});
