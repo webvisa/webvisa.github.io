@@ -21,29 +21,36 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
 	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+	
+	<link rel="stylesheet" href="libs/animate.css">
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+	<link rel="stylesheet" href="libs/flipclock/flipclock.css">
+	<link href="https://cdn.rawgit.com/objectivehtml/FlipClock/master/src/flipclock/css/flipclock.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
 <body>
-<!--==============Main-Screen==============-->
-				<div class="main-screen img-responsive" style="background-image: url(img/Main-Screen/Main-screen-bkg.jpg);">
+<!--==============Main-Screen=============-->
+		<div id="main-screen" class="main-screen img-responsive hidden-xs" style="background-image: url(img/Main-Screen/Main-screen-bkg.jpg);">
 						<div class="container">
 								<div class="row">
 										<div class="col-md-3 brand">
 												<h3><a id="home" href="#">Sliding.com.ua</a></h3>
-										</div>
+										</div> <!--Brand-->
 										<div class="col-md-8 col-md-offset-1">
-												<div class="navbar">
+												<div id="menu" class="navbar">
 														<ul class="menu">
 																<li><a href="#home">Главная</a></li>
 																<li><a href="#production">Продукция</a></li>
 																<li><a href="#delivery">Доставка</a></li>
-																<li><a href="#complect">Комплектация</a></li>
+																<li><a href="#equipment">Комплектация</a></li>
 																<li><a href="#actions">Акции</a></li>
 																<li><a href="#contacts">Контакты</a></li>
 														</ul>
 												</div>
-										</div>	
+										</div>	 <!--NAV-->
 								</div>
 								<div class="row main-h">
 										<div class="col-md-12">
@@ -62,18 +69,58 @@
 										</div>
 								</div>
 						</div>
-				</div>	
-<!--=============Production=============-->				
-				<div class="production">
+				</div>	 
+<!--=============Main-mobile==============-->
+		<div id="main-screen-mob" class="main-screen img-responsive visible-xs" style="background-image: url(img/Main-Screen/Main-screen-mobile.jpg);">
 						<div class="container">
 								<div class="row">
+										<div class="col-xs-6 brand">
+												<h3><a id="home" href="#">Sliding.com.ua</a></h3>
+										</div>
+										<div class="col-xs-3 col-md-ofsset-3">
+												<button class="hamburger"><img src="img/Main-Screen/burger.png" alt=""></button>
+												<button class="cross"><img src="img/Main-Screen/cross.png" alt=""></button>
+										</div>
+										<div class="row">
+												<div class="col-xs-12">
+														<div id="menu-mob" class="menu-mob">
+																<ul>
+																		<li><a href="#main-screen-mob">Главная</a></li>
+																		<li><a href="#production-mob">Продукция</a></li>
+																		<li><a href="#delivery-mob">Доставка</a></li>
+																		<li><a href="#equipment-mob">Комплектация</a></li>
+																		<li><a href="#actions-mob">Акции</a></li>
+																		<li><a href="#contacts-mob">Контакты</a></li>
+																</ul>
+														</div>
+												</div>
+										</div>
+										</div>	
+								</div>
+								<div class="row main-h-mob">
+										<div class="col-md-12 col-xs-12">
+												<h2 class="wow bounceInLeft">Автоматика для</h2>
+												<h1 class="wow bounceInRight">Сдвижных ворот</h1>
+										</div>
+								</div>
+								<div class="row">
+										<div class="col-md-12 btn-box">
+												<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button wow bounce">Заказать</button>
+										</div>
+								</div>
+						</div>
+				</div>
+<!--=============Production===============-->				
+		<div id="production" class="production hidden-xs">
+				<div class="container">
+						<div class="row">
 										<div class="col-md-12">
 												<h3>Автоматика для сдвижных ворот<br>Sliding 500/1300</h3>
 										</div>
 								</div>
-								<div class="row">
+						<div class="row">
 										<div class="advantages">
-												<div class="col-md-3">
+												<div class="col-md-3 col-xs-12">
 														<img src="img/Production/moisture-protection.png" alt="Влагозащита">
 														<h4>Влагозащита</h4>
 														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
@@ -95,31 +142,138 @@
 												</div>
 										</div>
 								</div>
-								<!-- <div class="row">
-										<div class="col-md-3">
-												<img src="img/Production/Sliding-800.png" alt="Sliding-800">
-										</div>
-										<div class="col-md-8">
-												<h3>Характеристики привода Sliding-800</h3>
-												<ul class="hidden-xs">
-														<li>Электромеханический привод Sliding-800 предназначен для автоматизации сдвижных ворот весом до 800 кг</li>
-														<li>Точность остановки ворот в крайних положениях обеспечивают в МАГНИТНЫЕ КОНЦЕВЫЕ ВЫКЛЮЧАТЕЛИ</li>
-														<li>АВРВИЙНАЯ РАЗБЛОКИРОВКА в случае отсутсвия электроенергии, .можно разблокировать автоматику с помощью встроенного рсцепителя</li>
-														<li>Монтажное крепление в комплекте, устанавливается на монтажную пластину, которая анкерится в бетонное основaние</li>
-														<li>Легкий монтаж по инструкции в комплекте</li>
-												</ul>
-												<div class="price">
-														<h2>9 546 грн</h2>
+						<div class="row row-slider-1 hidden-xs">
+								<div class="container">
+												<div class="slider single-item">
+												    <div class="row">
+												    		<div class="col-md-3">
+																		<img class="image-pro" src="img/Production/Sliding-800.png" alt="Sliding-800">
+																</div>
+																<div class="col-md-7 col-md-offset-1">
+																		<h3>Sliding-1300</h3>
+																		<ul class="hidden-xs">
+																				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+																				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti</li>
+																				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti tium</li>
+																				<li>Lorem ipsum dolor sit amet, consectetur  ccusantium</li>
+																				<li>Lorem ipsum dolor sit amet, consectetur</li>
+																				<li>Lorem ipsum dolor sit amet, consectetur. Deleniti accusantium</li>
+																		</ul>
+																		<h2 class="price">9 546 грн</h2>
+																		<div class="btn-box btn-pro">
+																				<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button wow bounce">Заказать</button>
+																		</div>
+																</div>
+												    </div>   
+												    <div class="row">
+												    		<div class="col-md-3">
+																		<img class="image-pro" src="img/Production/Sliding-1300.png" alt="Sliding-800">
+																</div>
+																<div class="col-md-7 col-md-offset-1">
+																		<h3>Sliding-1300</h3>
+																		<ul class="hidden-xs">
+																				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+																				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti</li>
+																				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti tium</li>
+																				<li>Lorem ipsum dolor sit amet, consectetur  ccusantium</li>
+																				<li>Lorem ipsum dolor sit amet, consectetur</li>
+																				<li>Lorem ipsum dolor sit amet, consectetur. Deleniti accusantium</li>
+																		</ul>
+																		<h2 class="price">9 546 грн</h2>
+																		<div class="btn-box btn-pro">
+																				<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button wow bounce">Заказать</button>
+																		</div>
+																</div>
+												    </div>  
 												</div>
-												<div class="col-md-12 btn-box">
-														<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button">Заказать</button>
-												</div>
 										</div>
-								</div> -->
+								<div class="arrow"></div>
 						</div>
 				</div>
-<!--==============Delivery==============-->
-				<div class="delivery" style="background-image: url(img/Delivery/Delivery-background.jpg);">
+		</div>
+<!--===========Production-mob=============-->	
+		<div id="production-mob" class="production-mob visible-xs">
+						<div class="container">
+										<div class="row">
+												<h3>Автоматика для сдвижных ворот<br>Sliding 500/1300</h3>
+										</div>
+										<div class="row">
+												<div class="advantages-mob">
+														<div class="col-md-3 col-xs-12">
+																<img src="img/Production/moisture-protection.png" alt="Влагозащита">
+																<h4>Влагозащита</h4>
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
+														</div>
+														<div class="col-md-3">
+																<img src="img/Production/working-temperature.png" alt="Рабочая температура">
+																<h4>Рабочая температура</h4>
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
+														</div>
+														<div class="col-md-3">
+																<img src="img/Production/always-in-stock.png" alt="Всегда на складе">
+																<h4>Всегда на складе</h4>
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
+														</div>
+														<div class="col-md-3">
+																<img src="img/Production/guarantee.png" alt="Гарантия">
+																<h4>Гарантия</h4>
+																<p>Гарантия от производителя 3 года</p>
+														</div>
+												</div>
+										</div>							
+										<div class="container">
+												<div class="slider-2 single-item">
+														<div class="row">
+															<div class="col-xs-12">
+																<img class="product" src="img/Production/Sliding-800-mob.png" alt="Sliding-800">
+																<h3>Sliding-800</h3>
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius odio vitae officia. Quos culpa veritatis, unde quod vel ipsam id a</p>
+																<div class="sly">
+																	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias explicabo neque quidem rem voluptate? Tempore alias similique, error eos repellat cumque iste non omnis, modi voluptas sunt, laborum eum perspiciatis.</p>
+																</div>
+																<div class="show">
+																	<div class="img-show">
+																			<img src="img/Production/marker.png" alt="">
+																			<img src="img/Production/marker.png" alt="">
+																			<img src="img/Production/marker.png" alt="">
+																	</div>
+																	<p class="detail">все характеристики</p>
+																	<h2 class="price-mob">9 546 грн</h2>
+																</div>
+																<div class="btn-box btn-slider-2">
+																		<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button">Заказать</button>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-xs-12">
+																<img class="product" src="img/Production/Sliding-800-mob.png" alt="Sliding-800">
+																<h3>Sliding-1300</h3>
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius odio vitae officia. Quos culpa veritatis, unde quod vel ipsam id a</p>
+																<div class="sly">
+																	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias explicabo neque quidem rem voluptate? Tempore alias similique, error eos repellat cumque iste non omnis, modi voluptas sunt, laborum eum perspiciatis.</p>
+																</div>
+																<div class="show">
+																	<div class="img-show">
+																			<img src="img/Production/marker.png" alt="">
+																			<img src="img/Production/marker.png" alt="">
+																			<img src="img/Production/marker.png" alt="">
+																	</div>
+																	<p class="detail">все характеристики</p>
+																	<h2 class="price-mob">11 999 грн</h2>
+																</div>
+																<div class="btn-box btn-slider-2">
+																		<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button">Заказать</button>
+																</div>
+															</div>
+														</div>
+												</div>
+												<div class="arrow-2"></div>
+										</div>
+						</div>
+				</div>
+<!--==============Delivery================-->
+		<div id="delivery" class="delivery hidden-xs" style="background-image: url(img/Delivery/Delivery-background-dark.jpg);">
 						<div class="container">
 								<div class="row">
 										<div class="col-md-12">
@@ -133,12 +287,23 @@
 														<h4>Оставить заказ</h4>
 														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
 												</div>
+												<div class="col-md-3">
+														<img src="img/Delivery/confirmation.png" alt="Подтверждение заказа">
+														<h4>Подтверждение заказа</h4>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
+												</div>
+												<div class="col-md-3">
+														<img src="img/Delivery/delivery.png" alt="Доставка">
+														<h4>Доставка</h4>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
+												</div>
+												<div class="col-md-3">
+														<img src="img/Delivery/payment.png" alt="Оплата">
+														<h4>Оплата</h4>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
+												</div>
 										</div>
 								</div>
-
-
-
-
 								<div class="row delivery-co">
 										<div class="col-md-3">
 												<img src="img/Delivery/nova-poshta-logo.png" alt="">
@@ -155,8 +320,44 @@
 								</div>
 						</div>
 				</div>
-<!--==============Equipment==============-->
-				<div class="equipment" style="background-image: url(img/Equipment/Equipment-background.jpg);">
+<!--============Delivery-mob==============-->
+		<div id="delivery-mob" class="delivery-mob visible-xs">
+						<div class="del-mob" style="background-image: url(img/Delivery/Delivery-background-mob.jpg);">
+									<div class="row">
+											<div class="col-md-12">
+													<h3>Доставка по всей Украине</h3>
+											</div>
+									</div>
+							</div>
+							<div class="container instruction-mob">
+									<div class="row">
+											<div class="order-script">
+													<div class="col-md-3">
+															<img src="img/Delivery/order.png" alt="Оставить заказ">
+															<h4>Оставить заказ</h4>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
+													</div>
+													<div class="col-md-3">
+															<img src="img/Delivery/confirmation.png" alt="Подтверждение заказа">
+															<h4>Подтверждение заказа</h4>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
+													</div>
+													<div class="col-md-3">
+															<img src="img/Delivery/delivery.png" alt="Доставка">
+															<h4>Доставка</h4>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
+													</div>
+													<div class="col-md-3">
+															<img src="img/Delivery/payment.png" alt="Оплата">
+															<h4>Оплата</h4>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis quibusdam nesciunt </p>
+													</div>
+											</div>
+									</div>
+							</div>
+				</div>
+<!--==============Equipment===============-->
+		<div id="equipment" class="equipment hidden-xs" style="background-image: url(img/Equipment/Equipment-background.jpg);">
 						<div class="container">
 								<div class="row">
 										<div class="col-md-11 col-md-offset-1">
@@ -241,20 +442,129 @@
 								</div>
 						</div>
 				</div>
-<!--==============Feedback===============-->
-				<div class="feedback">
-						
+<!--============Equipment-mob=============-->
+		<div id="equipment-mob" class="equipment-mob visible-xs" style="background-image: url(img/Equipment/bgd-mob.png);">
+						<div class="container">
+								<div class="row h4-equipment">
+										<h3>В комплект<br> автоматики<br> входит:</h3>
+								</div>
+								<div class="cap-mob">
+										<div class="row cap-mob-1">
+												<h4>Электропривод</h4>
+												<p>Выбранной Вами модели автоматики:<br>Sliding 300 или Sliding 800</p>												
+										</div>
+										<div class="row cap-mob-2">
+												<h4>Магнитные концевики</h4>
+												<p>Для настройки граничных положений<br>открытия и закрытия Ваших ворот</p>												
+										</div>
+										<div class="row cap-mob-3">
+												<h4>Комплект для монтажа</h4>
+												<p>Монтажное основание и крепежные<br>элементы для легкого монтажа оборудования</p>												
+										</div>
+								</div>
+								<div class="row h3-acs">
+										<h3>Аксессуары для автоматических ворот</h3>
+								</div>
+								<div class="container">
+										<div class="slider-3 single-item">
+												<div class="row accessories accessories-mob">
+														<img src="img/Equipment/transmitter-mob.png" alt="Пульт дистанционного управления">
+														<h4>Пульт дистанционного<br> управления</h4>
+														<p>Пульт Transmitter-4 предназначен для дистанционного управления 4 автоматическими устройствами</p>
+														<h5>299 грн</h5>
+														<div class="btn-box btn-eq-mob">
+																<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button">Заказать</button>
+														</div>
+												</div>
+												<div class="row accessories accessories-mob">
+														<img src="img/Equipment/lamp-mob.png" alt="Пульт дистанционного управления">
+														<h4>Сигнальная светодиодная<br> лампа</h4>
+														<p>Сигнальная светодиодная лампа с антенной Lamp-PRO предназначена для оповещения о движении ворот</p>
+														<h5>399 грн</h5>
+														<div class="btn-box btn-eq-mob">
+																<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button">Заказать</button>
+														</div>
+												</div>
+												<div class="row accessories accessories-mob">
+														<img src="img/Equipment/photocell-mob.png" alt="Пульт дистанционного управления">
+														<h4>Фотоэлементы</h4>
+														<br>
+														<p>Фотоэлементы безопасности Photocell-N, состоящие из инфракрасного передатчика и приемника</p>
+														<h5>299 грн</h5>
+														<div class="btn-box btn-eq-mob">
+																<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button">Заказать</button>
+														</div>
+												</div>
+										</div>
+								</div>
+								<div class="arrow-3"></div>
+						</div>
 				</div>
-<!--==============Sale===============-->
-				<div class="sale img-responsive" style="background-image: url(img/Sale/Sale-background-com.jpg);">
+<!--==============Feedback================-->
+		<div class="feedback hidden-xs">
+				<div class="container">
+												<div class="slider-1 single-item">
+												    <div class="row">
+												    		<div class="col-md-3 col-md-offset-1">
+																		<img class="client" src="img/Feedback/feedback-1.png" alt="Sliding-800">
+																</div>
+																<div class="col-md-7 col-md-offset-1">
+																		<h3>Владимир Кравченко</h3>
+																		<p class="signature">очень довольный клиент</p>
+																		<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo optio, corrupti omnis libero veritatis a iste assumenda recusandae quasi quos nulla voluptatem magnam quidem accusamus provident aut perspiciatis temporibus eum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias iusto, veniam praesentium ipsum sint placeat voluptas sapiente eos atque debitis sit labore, optio omnis tenetur! Voluptatum numquam, veniam itaque.</p>
+																</div>
+												    </div>   
+												    <div class="row">
+												    		<div class="col-md-3 col-md-offset-1">
+																		<img class="client" src="img/Feedback/feedback-1.png" alt="Sliding-800">
+																</div>
+																<div class="col-md-7 col-md-offset-1">
+																		<h3>Владимир Кравченко</h3>
+																		<p class="signature">очень довольный клиент</p>
+																		<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo optio, corrupti omnis libero veritatis a iste assumenda recusandae quasi quos nulla voluptatem magnam quidem accusamus provident aut perspiciatis temporibus eum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias iusto, veniam praesentium ipsum sint placeat voluptas sapiente eos atque debitis sit labore, optio omnis tenetur! Voluptatum numquam, veniam itaque.</p>
+																</div>
+												    </div>   
+												</div>
+										</div>
+								<div class="arrow-1"></div>
+						</div>
+		</div>
+<!--==============Feedback-mob============-->
+		<div class="feedback-mob visible-xs">
+						<div class="container">
+								<div>
+										<h3>Отзывы</h3>
+								</div>
+										<div class="container">
+										<div class="slider-4 single-item">
+												<div class="row accessories accessories-mob">
+														<img src="img/Feedback/feedback-1-mob.png" alt="Пульт дистанционного управления">
+														<h4>Владимир Кравченко</h4>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, blanditiis. Dicta a accusantium minima explicabo, ullam perferendis qui.</p>
+												</div>
+												<div class="row accessories accessories-mob">
+														<img src="img/Feedback/feedback-1-mob.png" alt="Пульт дистанционного управления">
+														<h4>Владимир Кравченко</h4>
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, blanditiis. Dicta a accusantium minima explicabo, ullam perferendis qui.</p>
+												</div>				
+										</div>
+								</div>
+										<div class="arrow-4"></div>
+						</div>
+				</div>
+<!--===============Sale===================-->
+		<div id="actions" class="sale img-responsive hidden-xs" style="background-image: url(img/Sale/Sale-background-com.jpg);">
 						<div class="container">
 								<div class="row">
-										<div class="col-md-6 col-md-offset-6">
+										<div class="row-sale col-md-7 col-md-offset-5">
 												<h1>Закажи сейчас!</h1>
 												<h2>и получи скидку</h2>
 												<h3>20%</h3>
 												<p>до конца акции осталось:</p>
-												<h3>Timer</h3>
+												<div class="timer">
+														<div class="clock"></div>
+														<div class="message"></div>
+												</div>
 												<div class="btn-box btn-sale">
 														<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button">Заказать</button>
 												</div>
@@ -262,8 +572,21 @@
 								</div>
 						</div>
 				</div>
-<!--===========Consultation==========-->
-				<div class="consultation" style="background-image: url(img/Consultation/Consultation-background.jpg);">
+<!--=============Sale-mob=================-->
+		<div id="actions-mob" class="sale-mob visible-xs">
+						<div>
+								<h1>Закажи сейчас!</h1>
+								<h2>и получи скидку</h2>
+								<h3>20%</h3>
+								<p>до конца акции осталось:</p>
+								<div class="clockmob"></div>
+								<div class="btn-box btn-sale">
+										<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button">Заказать</button>
+								</div>
+						</div>
+				</div>
+<!--===========Consultation===============-->
+		<div class="consultation hidden-xs" style="background-image: url(img/Consultation/Consultation-background.jpg);">
 						<div class="container">
 								<div class="row">
 										<div class="col-md-4 col-md-offset-2">
@@ -286,21 +609,45 @@
 								</div>
 						</div>
 				</div>
-<!--==============Footer=============-->
-				<div class="footer">
+<!--============Consultation-mob==========-->
+		<div class="consultation-mob visible-xs" style="background-image: url(img/Consultation/Consultation-background-mob.jpg.png);">
+						<div class="container">
+								<div class="row">
+										<div>
+												<h2 class="get-cons">Получить<br>консультацию</h2>
+												<h1 class="free-cons">Бесплатно</h1>
+										</div>
+										<div class="col-md-5 col-md-offset-1">
+												<form action="action.php" method="post">
+														<div class="input-name">
+																<input type="text" name="name" placeholder="Имя">
+														</div>
+														<div class="input-phone">
+																<input type="tel" name="phone" placeholder="Телефон">
+														</div>
+														<div class="btn-cons">
+																<button data-toggle="modal" id="to_order" href="#to_order_modal" type="button" class="button">Отправить</button>
+														</div>
+												</form>
+										</div>
+								</div>
+						</div>
+				</div>
+<!--===============Footer=================-->
+		<div class="footer hidden-xs">
 						<div class="container">
 								<div class="row contacts">
 										<div class="phone-1">
 												<a href="tel">+38 (050) 296 04 90</a>
 										</div>
 										<div class="phone-img">
-												<img src="img/Footer/phone-call.png" alt="">
+												<img class="wow tada infinite" src="img/Footer/phone-call.png" alt="">
 										</div>
 										<div class="phone-2">
 												<a href="tel">+38 (095) 409 36 62</a>
 										</div>
 								</div>
-								<div class="row nav-footer">
+								<div id="contacts" class="row nav-footer">
 										<div class="col-md-3 brand">
 												<h3><a id="home" href="#">Sliding.com.ua</a></h3>
 										</div>
@@ -310,7 +657,7 @@
 																<li><a href="#home">Главная</a></li>
 																<li><a href="#production">Продукция</a></li>
 																<li><a href="#delivery">Доставка</a></li>
-																<li><a href="#complect">Комплектация</a></li>
+																<li><a href="#equipment">Комплектация</a></li>
 																<li><a href="#actions">Акции</a></li>
 																<li><a href="#contacts">Контакты</a></li>
 														</ul>
@@ -318,7 +665,7 @@
 										</div>	
 								</div>
 						</div>
-						<hr>
+						<hr class="long-hr-main">
 						<div class="container">
 								<div class="row protected">
 										<div class="col-md-12">
@@ -329,15 +676,147 @@
 								</div>
 						</div>
 				</div>
+<!--==============Footer-mob==============-->
+		<div class="footer-mob visible-xs">
+						<div class="container">				
+										<div class="brand-mob">
+												<h3><a id="home" href="#">Sliding.com.ua</a></h3>
+										</div>
+										<div class="phone-img-mob">
+												<img src="img/Footer/phone-call-mob.png" alt="">
+										</div>
+										<div id="contacts-mob" class="phone-1">
+												<a href="tel">+38 (050) 296 04 90</a>
+										</div>
+										<div class="phone-2">
+												<a href="tel">+38 (095) 409 36 62</a>
+										</div>
+										<hr class="small-hr">
+										<div class="navbar">
+												<ul class="menu">
+														<li><a href="#main-screen-mob">Главная</a></li>
+														<li><a href="#production-mob">Продукция</a></li>
+														<li><a href="#delivery-mob">Доставка</a></li>
+														<li><a href="#equipment-mob">Комплектация</a></li>
+														<li><a href="#actions-mob">Акции</a></li>
+														<li><a href="#contacts-mob">Контакты</a></li>
+												</ul>
+										</div>	
+						</div>
+						<hr class="long-hr">
+						<div class="container">
+								<div class="row protected-mob">
+												<span class="site">Sliding.com.ua  2018</span>
+												<span class="copy">&copy</span>
+												<span class="rights">Все права защищены</span>
+								</div>
+						</div>
+				</div>
+				
 
 
-	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="stylesheet" href="libs/animate.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+	<script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="js/scripts.min.js"></script>
+	<script type="text/javascript" src="libs/slick/slick.js"></script>
+	<script src="https://cdn.rawgit.com/objectivehtml/FlipClock/master/compiled/flipclock.min.js"></script>
+	<script src="libs/flipclock/flipclock.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
 	<script src="js/wow.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#menu").on("click","a", function (event) {
+			//отменяем стандартную обработку нажатия по ссылке
+			event.preventDefault();
+			//забираем идентификатор бока с атрибута href
+			var id = $(this).attr('href'),
+			//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+			//анимируем переход на расстояние - top за 1500 мс
+			$('body,html').animate({scrollTop: top}, 1500);
+			});
+		});
+	</script> <!--Script-Fluency-->
+	<script>
+		$( document ).ready(function() {
+
+			$( ".cross" ).hide();
+			$( ".menu-mob" ).hide();
+			$( ".hamburger" ).click(function() {
+			$( ".menu-mob" ).slideToggle( "slow", function() {
+			$( ".hamburger" ).hide();
+			$( ".cross" ).show();
+			});
+			});
+
+			$( ".cross" ).click(function() {
+			$( ".menu-mob" ).slideToggle( "slow", function() {
+			$( ".cross" ).hide();
+			$( ".hamburger" ).show();
+			});
+			});
+
+			});
+	</script> <!--Script-Gamburger-->
+	<script>
+			jQuery(document).ready(function($) {
+			   var clock;
+			   var futureDate = new Date("January 25, 2018 0:00 PM EDT");
+			   var currentDate = new Date();
+			   var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+			   function dayDiff(first, second) {
+			     return (second - first) / (1000 * 60 * 60 * 24);
+			   }
+			   if (dayDiff(currentDate, futureDate) < 100) {
+			     $('.clock').addClass('twoDayDigits');
+			   } else {
+			     $('.clock').addClass('threeDayDigits');
+			   }
+			   if (diff < 0) {
+			     diff = 0;
+			   }
+			   clock = $('.clock').FlipClock(diff, {
+     clockFace: 'HourCounter',
+     language: 'ru-ru',
+     countdown: true
+   });
+ });
+	</script>
+	<script>
+			jQuery(document).ready(function($) {
+			   var clockmob;
+			   var futureDate = new Date("January 25, 2018 0:00 PM EDT");
+			   var currentDate = new Date();
+			   var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+			   function dayDiff(first, second) {
+			     return (second - first) / (1000 * 60 * 60 * 24);
+			   }
+			   if (dayDiff(currentDate, futureDate) < 100) {
+			     $('.clockmob').addClass('twoDayDigits');
+			   } else {
+			     $('.clockmob').addClass('threeDayDigits');
+			   }
+			   if (diff < 0) {
+			     diff = 0;
+			   }
+			   clock = $('.clockmob').FlipClock(diff, {
+     clockFace: 'HourCounter',
+     language: 'ru-ru',
+     countdown: true
+   });
+ });
+	</script>
+	<!-- <script type="text/javascript" src="libs/slick/slick.min.js"></script> -->
 	<script>
 		new WOW().init();
+	</script> <!--WOW-init-->
+	<script>
+		$('.show').click(function() {
+		  	$(this).toggleClass('active').prev()[$(this).prev().is(':hidden') ? "slideDown" : "slideUp"](400);
+		});
 	</script>
 </body>
 </html>
