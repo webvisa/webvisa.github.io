@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'icomoon';
+font-family: 'icomoon';
   src:  url('../fonts/Icomoon/icomoon.eot?5rmwe9');
   src:  url('../fonts/Icomoon/icomoon.eot?5rmwe9#iefix') format('embedded-opentype'),
     url('../fonts/Icomoon/icomoon.ttf?5rmwe9') format('truetype'),
@@ -24,52 +24,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-beef:before {
+.icon-left-arrow:before {
   content: "\e900";
 }
-.icon-Facebook .path1:before {
+.icon-beef:before {
   content: "\e901";
-  color: rgb(19, 19, 19);
 }
-.icon-Facebook .path2:before {
+.icon-facebook:before {
   content: "\e902";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
 }
-.icon-Insta .path1:before {
+.icon-instagram:before {
   content: "\e903";
-  color: rgb(19, 19, 19);
-}
-.icon-Insta .path2:before {
-  content: "\e904";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-Insta .path3:before {
-  content: "\e905";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-Insta .path4:before {
-  content: "\e906";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-left-arrow:before {
-  content: "\e907";
-}
-.icon-right-arrow:before {
-  content: "\e908";
 }
 .icon-phone:before {
-  content: "\e909";
+  content: "\e904";
 }
 .icon-plate:before {
-  content: "\e90a";
+  content: "\e905";
+}
+.icon-right-arrow:before {
+  content: "\e906";
 }
 .icon-Weiter:before {
-  content: "\e90b";
+  content: "\e907";
 }
 .icon-Wine:before {
-  content: "\e90c";
+  content: "\e908";
 }
